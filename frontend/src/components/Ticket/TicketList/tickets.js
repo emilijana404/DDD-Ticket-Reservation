@@ -26,12 +26,12 @@ const Tickets = (props) => {
                                     <td>{term.movieName}</td>
                                     <td>{term.movieFormat}</td>
                                     <td>{term.date}</td>
-                                    <td>{term.time}</td>
+                                    <td>{term.time} H</td>
                                     <td>{term.price.amount} {term.price.currency}</td>
                                     <td>{term.sales}</td>
                                     <td scope={"col"} className={"text-right"}>
                                         <a title={"Reserve"} className={"btn btn-outline-dark"}
-                                           onClick={() => props.onadd(term.id)}>
+                                           onClick={() => props.onAdd(term.id)}>
                                             Reserve
                                         </a>
                                     </td>

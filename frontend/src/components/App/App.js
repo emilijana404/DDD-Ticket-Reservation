@@ -70,8 +70,8 @@ class App extends Component {
             });
     };
 
-    addTicket = (movieName, sales, movieFormat, time, date, currency, amount) => {
-        ticketShopService.addTicket(movieName, sales, movieFormat, time, date, currency, amount).then(() => {
+    addTicket = (movieName, sales, format, time, date, currency, amount) => {
+        ticketShopService.addTicket(movieName, sales, format, time, date, currency, amount).then(() => {
             window.location.href = "/tickets"
         });
     };

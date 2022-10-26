@@ -19,8 +19,8 @@ public class DataInitializer {
 
     @PostConstruct
     public void initData() {
-        Ticket t1 = Ticket.build("Inside out", 10, MovieFormat.DIGITAL2D, "15:00 H", "05/12", Money.valueOf(Currency.MKD,500));
-        Ticket t2 = Ticket.build("Lion King", 5, MovieFormat.DIGITAL2D, "20:30 H", "28/10", Money.valueOf(Currency.MKD,100));
+        Ticket t1 = Ticket.build("Inside out", 10, MovieFormat.DIGITAL2D, "15:00", "05/12", Money.valueOf(Currency.MKD,500));
+        Ticket t2 = Ticket.build("Lion King", 5, MovieFormat.DIGITAL2D, "20:30", "28/10", Money.valueOf(Currency.MKD,100));
 
         if (ticketRepository.findAll().isEmpty()) {
             ticketRepository.saveAll(Arrays.asList(t1,t2));

@@ -5,7 +5,7 @@ const TicketAdd = (props) => {
     const [formData, updateFormData] = React.useState({
         movieName: "",
         sales: 0,
-        movieFormat: "",
+        format: 1,
         time: "",
         date: "",
         currency: "",
@@ -23,13 +23,13 @@ const TicketAdd = (props) => {
         e.preventDefault();
         const movieName = formData.movieName;
         const sales = formData.sales;
-        const movieFormat = formData.movieFormat;
+        const format = formData.format;
         const time = formData.time;
         const date = formData.date;
         const currency = formData.currency;
         const amount = formData.amount;
 
-        props.onAddTicket(movieName, sales, movieFormat, time, date, currency, amount);
+        props.onAddTicket(movieName, sales, format, time, date, currency, amount);
     }
 
     return (
@@ -46,7 +46,7 @@ const TicketAdd = (props) => {
                         <input type="text"
                                className="form-control"
                                id="name"
-                               name="name"
+                               name="movieName"
                                required
                                placeholder="Enter movie name"
                                onChange={handleChange}
@@ -66,7 +66,7 @@ const TicketAdd = (props) => {
                         <label>Format</label>
                         <select name="format" className="form-control" onChange={handleChange}>
                             {props.movieFormat.map((term) =>
-                                <option value={term}>{term}</option>
+                                <option value={String(term)}>{term}</option>
                             )}
                         </select>
                     </div>
@@ -76,7 +76,7 @@ const TicketAdd = (props) => {
                                className="form-control"
                                id="time"
                                name="time"
-                               placeholder="21:00 H"
+                               placeholder="21:00"
                                required
                                onChange={handleChange}
                         />

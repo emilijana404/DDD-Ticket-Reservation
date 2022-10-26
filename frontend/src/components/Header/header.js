@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 const header = (props) => {
     return (
         <header>
-            <nav className="navbar navbar-expand-lg navbar-dark navbar-fixed bg-dark">
+            <nav className="navbar navbar-expand-lg navbar-dark navbar-fixed bg-secondary">
                 <div className="container-fluid">
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarCollapse"

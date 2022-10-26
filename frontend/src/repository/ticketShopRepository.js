@@ -11,11 +11,11 @@ const ticketShopService = {
     fetchCurrency: () => {
         return axios.ticketAxios.get("/ticket/currency");
     },
-    addTicket: (movieName, sales, movieFormat, time, date, currency, amount) => {
+    addTicket: (movieName, sales, format, time, date, currency, amount) => {
         return axios.ticketAxios.post("/ticket/add", {
             "movieName": movieName,
             "sales": sales,
-            "movieFormat": movieFormat,
+            "format": format,
             "time": time,
             "date": date,
             "price": {
